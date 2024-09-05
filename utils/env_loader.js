@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from 'fs';
 /**
  * Load environment variables from .env file
  */
-const env_loader = () => {
+const envLoader = () => {
   const env = process.env.npm_lifecycle_event || 'dev';
   const path = env.includes('test') || env.includes('cover') ? '.env.test' : '.env';
 
@@ -19,4 +19,4 @@ const env_loader = () => {
   }
 };
 
-export default env_loader;
+export default envLoader;
